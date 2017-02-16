@@ -1,0 +1,29 @@
+<!Doctype html>
+<head>
+    <title>red/blue</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="three-dee"></div>
+        <div class="three-dee2"></div>
+    </div>
+    
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var l = $('.three-dee')[0].offsetLeft;
+          $(window).mousemove(function(e){
+              var x = e.pageX;
+              
+              if(x < ($(window).outerWidth() / 2)){
+                  $('.three-dee2').css('left', l + (x/10) + 'px');
+              } else {
+                  $('.three-dee2').css('left', l - (x/10) + 'px');
+              }
+              
+          });
+        });
+    </script>
+</body>
