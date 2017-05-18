@@ -21,8 +21,10 @@
               
               if(x < ($(window).outerWidth() / 2)){
                   $('.three-dee2').css('left', l + (x/10) + 'px');
-              } else {
+              } else if {
                   $('.three-dee2').css('left', l - (x/10) + 'px');
+              } else {
+                  $('body').css('background', 'red');
               }
               
           });
