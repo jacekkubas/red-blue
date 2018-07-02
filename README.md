@@ -1,1 +1,1 @@
-red-blue
+Fun with css blend mode and javascript.

@@ -1,33 +1,37 @@
 <!Doctype html>
+
 <head>
     <title>red/blue</title>
     <meta charset="utf-8">
     <link rel='stylesheet' type="text/css" href="css/main.css">
 </head>
+
 <body>
-    <div>123</div>
     <div class="wrap">
         <div class="three-dee"></div>
         <div class="three-dee2"></div>
     </div>
-    <div>abc</div>
-    
-    <script src="jquery.min.js"></script>
+
     <script>
-        $(document).ready(function(){
-            var l = $('.three-dee')[0].offsetLeft;
-          $(window).mousemove(function(e){
-              var x = e.pageX;
-              
-              if(x < ($(window).outerWidth() / 2)){
-                  $('.three-dee2').css('left', l + (x/10) + 'px');
-              } else if {
-                  $('.three-dee2').css('left', l - (x/10) + 'px');
-              } else {
-                  $('body').css('background', 'red');
-              }
-              
-          });
-        });
+        var three = document.querySelector('.three-dee');
+        var three2 = document.querySelector('.three-dee2');
+        var start = 0;
+        var end = window.innerWidth;
+        var x;
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        function onMouseMove (e) {
+            x = e.pageX;
+            var percent = (x / end) * 100;
+            var reverse = 100 - percent;
+            var px = (end * percent) / 100;
+            var pxR = (end * reverse) / 100;
+            
+            three.style.left = (pxR - three.offsetWidth / 2) + 'px';
+            three2.style.left = (px - three.offsetWidth / 2) + 'px';
+
+        }
     </script>
 </body>
+

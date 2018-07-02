@@ -1,35 +1,38 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0; 
 }
-body{
-    overflow: hidden;
+
+body {
+  overflow: hidden; 
 }
-.wrap{
-    width: 100%;
-    margin: auto;
-    padding: 0;
+
+.wrap {
+  width: 100%;
+  margin: auto;
+  padding: 0; 
 }
+
 .three-dee {
-    margin: 0;
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: url('../my.jpg'), cyan;
-    background-blend-mode: lighten;
-    background-size: cover;
+  margin: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: url("../my.jpg"), cyan;
+  background-blend-mode: lighten;
+  background-size: cover; 
 }
 
 .three-dee2 {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    background: url('../my.jpg'), red;
-    background-blend-mode: lighten;
-    background-size: cover;
-    mix-blend-mode: darken;
-  }
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: url("../my.jpg"), red;
+  background-blend-mode: lighten;
+  background-size: cover;
+  mix-blend-mode: darken; 
+}
